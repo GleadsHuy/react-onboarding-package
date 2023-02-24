@@ -7,7 +7,6 @@ import { IconContext } from 'react-icons'
 import { MdAddCircle } from 'react-icons/md'
 import { HiMinusCircle } from 'react-icons/hi'
 import { BiLoaderAlt } from 'react-icons/bi'
-import { Form } from 'react-bootstrap'
 import {
   useForm,
   useFieldArray,
@@ -454,7 +453,7 @@ export default function IncorporationEntityNameCheck({ data }) {
           justifyContent: 'space-between'
         }}
       >
-        <Form noValidate>
+        <form noValidate>
           <div className={`${styles.form_header} ${styles.Header}`}>
             <div className={styles.top_wrapper}>
               <div style={{ flex: '0 0 auto' }}>
@@ -660,8 +659,7 @@ export default function IncorporationEntityNameCheck({ data }) {
                                 marginTop: '4px'
                               }}
                             >
-                              <Form.Control.Feedback
-                                type='invalid'
+                              <div
                                 className={`${
                                   errors?.companyName
                                     ? styles.d_block
@@ -679,7 +677,7 @@ export default function IncorporationEntityNameCheck({ data }) {
                                     errors?.companyName[`${index}`]?.name
                                       ?.message}
                                 </span>
-                              </Form.Control.Feedback>
+                              </div>
                             </div>
                             <div
                               style={{
@@ -844,7 +842,7 @@ export default function IncorporationEntityNameCheck({ data }) {
                 )}
             </div>
           </div>
-        </Form>
+        </form>
         <section style={{ margintop: '32px' }}>
           <div
             style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center' }}

@@ -17,7 +17,6 @@ var leftObdImg = _interopDefault(require('./bg-left-obd~UgZSiaCI.png'));
 var menuNavImg = _interopDefault(require('./menu-nav~AOjLftbh.png'));
 var tabletBuildImg = _interopDefault(require('./bg-tablet-build~kDAEKiYW.svg'));
 var obdIncorp2Img = _interopDefault(require('./obd-incorporation-2~cvSdbBtL.png'));
-var reactBootstrap = require('react-bootstrap');
 var reactHookForm = require('react-hook-form');
 var Select = require('react-select');
 var Select__default = _interopDefault(Select);
@@ -50,6 +49,9 @@ var comparisonTable = _interopDefault(require('./comparison-table~bpwyRZHM.png')
 var buildingImg = _interopDefault(require('./building~IFwjSqIH.png'));
 var md = require('react-icons/md');
 var hi = require('react-icons/hi');
+var reactPopperTooltip = require('react-popper-tooltip');
+require('react-popper-tooltip/dist/styles.css');
+var react = require('@headlessui/react');
 var ai = require('react-icons/ai');
 var pacbasic = _interopDefault(require('./pac-basic~AyzXROgI.png'));
 var pacpremium = _interopDefault(require('./pac-premium~XjDmcCNY.png'));
@@ -58,6 +60,11 @@ var locallite = _interopDefault(require('./local-lite~TJhbcTdX.png'));
 var localstandard = _interopDefault(require('./local-standard~AyzXROgI.png'));
 var foreignerbasic = _interopDefault(require('./foreigner-basic~uQZFFwrd.png'));
 var foreignerultra = _interopDefault(require('./foreigner-ultra~XjDmcCNY.png'));
+var jointventurecompanyorganization = _interopDefault(require('./joint-venture-company-organization~ygCSDNoP.svg'));
+var jointventurecompanyindividual = _interopDefault(require('./joint-venture-company-individual~VtMqmgzt.svg'));
+var establishmentofwhollyownedforeignenterprise = _interopDefault(require('./establishment-of-wholly-owned-foreign-enterprise~mFOPCCSv.svg'));
+var establishmentofbranch = _interopDefault(require('./establishment-of-branch~LiXqOEXr.svg'));
+var establishmentofrepresentativeoffice = _interopDefault(require('./establishment-of-representative-office~RtWuekwm.svg'));
 var ri = require('react-icons/ri');
 var reactStripeJs = require('@stripe/react-stripe-js');
 var stripeJs = require('@stripe/stripe-js');
@@ -8814,7 +8821,7 @@ function IncorporationEntityNameCheck(_ref) {
       flexDirection: 'column',
       justifyContent: 'space-between'
     }
-  }, /*#__PURE__*/React__default.createElement(reactBootstrap.Form, {
+  }, /*#__PURE__*/React__default.createElement("form", {
     noValidate: true
   }, /*#__PURE__*/React__default.createElement("div", {
     className: styles$a.form_header + " " + styles$a.Header
@@ -8968,8 +8975,7 @@ function IncorporationEntityNameCheck(_ref) {
         padding: '0 8px',
         marginTop: '4px'
       }
-    }, /*#__PURE__*/React__default.createElement(reactBootstrap.Form.Control.Feedback, {
-      type: "invalid",
+    }, /*#__PURE__*/React__default.createElement("div", {
       className: "" + (errors !== null && errors !== void 0 && errors.companyName ? styles$a.d_block : styles$a.d_none)
     }, /*#__PURE__*/React__default.createElement("span", {
       style: {
@@ -9142,7 +9148,7 @@ function IncorporationEntityNameCheck(_ref) {
   }))))))));
 }
 
-var styles$b = {"btn_top_wrapper":"_styles-module__btn_top_wrapper__34DmI","btn_top":"_styles-module__btn_top__3qqS1","button":"_styles-module__button__3860g","title":"_styles-module__title__2BlXc","description_wrapper":"_styles-module__description_wrapper__3Nlot","description":"_styles-module__description__3VahP","comparison_wrapper":"_styles-module__comparison_wrapper__3GLBr","comparison_top":"_styles-module__comparison_top__nxU8b","loader_wrapper":"_styles-module__loader_wrapper__3VbNy","package_container":"_styles-module__package_container__2x8Ni","card_wrapper":"_styles-module__card_wrapper__3w1_k","item_height":"_styles-module__item_height__6F5fK","content_wrapper_vn":"_styles-module__content_wrapper_vn__2QOXs","card":"_styles-module__card__3N8iG","card_inside":"_styles-module__card_inside__2aMYN","img_wrapper":"_styles-module__img_wrapper__hhqdG","cardName_wrapper":"_styles-module__cardName_wrapper__3OX3r","cardName":"_styles-module__cardName__22pk0","cardNameVN":"_styles-module__cardNameVN__7JTA6","cardPrice":"_styles-module__cardPrice__lMNoF","cardPriceVN":"_styles-module__cardPriceVN__sunAZ","cardDes":"_styles-module__cardDes__123Dc","basic":"_styles-module__basic__1pZey","local-lite":"_styles-module__local-lite__1fRKW","startup-for-locals":"_styles-module__startup-for-locals__2B7pn","standard":"_styles-module__standard__3mC0T","local-standard":"_styles-module__local-standard__3Fr5q","premium":"_styles-module__premium__10UG7","foreigner-basic":"_styles-module__foreigner-basic__1CpII","standard-with-employment-pass":"_styles-module__standard-with-employment-pass__23Y2O","foreigner-ultra":"_styles-module__foreigner-ultra__1mWaS","formSwich":"_styles-module__formSwich__1Glki","info":"_styles-module__info__1NfHz","note":"_styles-module__note__3O97i","note_vn":"_styles-module__note_vn__2QqH5","modal_wrapper":"_styles-module__modal_wrapper__260T9","fadeIn":"_styles-module__fadeIn__21U4U","close_button":"_styles-module__close_button__4X6g2","tab_container":"_styles-module__tab_container__3ZOMY","tab_wrapper":"_styles-module__tab_wrapper__3Mg2u","tab_item":"_styles-module__tab_item__36v3_","active_tab":"_styles-module__active_tab__g8EO3","dialog":"_styles-module__dialog___aI90","headerModal":"_styles-module__headerModal__1TU3P","bodyModal":"_styles-module__bodyModal__1hv_K","Header":"_styles-module__Header__1hw-O","comparison_bottom_wrapper":"_styles-module__comparison_bottom_wrapper__1rqx-","comparison_bottom":"_styles-module__comparison_bottom__3PrcN","comparison_btn":"_styles-module__comparison_btn__3qyHB","comparison_img":"_styles-module__comparison_img__3RYJD","btn_bottom_wrapper":"_styles-module__btn_bottom_wrapper__3kj8Y","btn_back_bottom":"_styles-module__btn_back_bottom__1fOjL","Body":"_styles-module__Body__2PprN","package":"_styles-module__package__110ld","card_wrapper_sg":"_styles-module__card_wrapper_sg__19DVk"};
+var styles$b = {"btn_top_wrapper":"_styles-module__btn_top_wrapper__34DmI","btn_top":"_styles-module__btn_top__3qqS1","button":"_styles-module__button__3860g","title":"_styles-module__title__2BlXc","description_wrapper":"_styles-module__description_wrapper__3Nlot","description":"_styles-module__description__3VahP","comparison_wrapper":"_styles-module__comparison_wrapper__3GLBr","comparison_top":"_styles-module__comparison_top__nxU8b","loader_wrapper":"_styles-module__loader_wrapper__3VbNy","package_container":"_styles-module__package_container__2x8Ni","card_wrapper":"_styles-module__card_wrapper__3w1_k","item_height":"_styles-module__item_height__6F5fK","content_wrapper_vn":"_styles-module__content_wrapper_vn__2QOXs","card":"_styles-module__card__3N8iG","card_inside":"_styles-module__card_inside__2aMYN","img_wrapper":"_styles-module__img_wrapper__hhqdG","cardName_wrapper":"_styles-module__cardName_wrapper__3OX3r","cardName":"_styles-module__cardName__22pk0","cardNameVN":"_styles-module__cardNameVN__7JTA6","cardPrice":"_styles-module__cardPrice__lMNoF","cardPriceVN":"_styles-module__cardPriceVN__sunAZ","cardDes":"_styles-module__cardDes__123Dc","basic":"_styles-module__basic__1pZey","local-lite":"_styles-module__local-lite__1fRKW","startup-for-locals":"_styles-module__startup-for-locals__2B7pn","standard":"_styles-module__standard__3mC0T","local-standard":"_styles-module__local-standard__3Fr5q","premium":"_styles-module__premium__10UG7","foreigner-basic":"_styles-module__foreigner-basic__1CpII","standard-with-employment-pass":"_styles-module__standard-with-employment-pass__23Y2O","foreigner-ultra":"_styles-module__foreigner-ultra__1mWaS","switchPackageWrapper":"_styles-module__switchPackageWrapper__3NhDk","switchItem":"_styles-module__switchItem__15JW8","buttonSwitch":"_styles-module__buttonSwitch__1iJsP","switchToggle":"_styles-module__switchToggle__3J5ey","formSwich":"_styles-module__formSwich__1Glki","info":"_styles-module__info__1NfHz","note":"_styles-module__note__3O97i","note_vn":"_styles-module__note_vn__2QqH5","modal_wrapper":"_styles-module__modal_wrapper__260T9","fadeIn":"_styles-module__fadeIn__21U4U","close_button":"_styles-module__close_button__4X6g2","tab_container":"_styles-module__tab_container__3ZOMY","tab_wrapper":"_styles-module__tab_wrapper__3Mg2u","tab_item":"_styles-module__tab_item__36v3_","active_tab":"_styles-module__active_tab__g8EO3","dialog":"_styles-module__dialog___aI90","headerModal":"_styles-module__headerModal__1TU3P","bodyModal":"_styles-module__bodyModal__1hv_K","Header":"_styles-module__Header__1hw-O","comparison_bottom_wrapper":"_styles-module__comparison_bottom_wrapper__1rqx-","comparison_bottom":"_styles-module__comparison_bottom__3PrcN","comparison_btn":"_styles-module__comparison_btn__3qyHB","comparison_img":"_styles-module__comparison_img__3RYJD","btn_bottom_wrapper":"_styles-module__btn_bottom_wrapper__3kj8Y","btn_back_bottom":"_styles-module__btn_back_bottom__1fOjL","Body":"_styles-module__Body__2PprN","package":"_styles-module__package__110ld","card_wrapper_sg":"_styles-module__card_wrapper_sg__19DVk"};
 
 function popupPackages(country_id, entity_type_id, tab) {
   var content = '';
@@ -9152,7 +9158,7 @@ function popupPackages(country_id, entity_type_id, tab) {
       break;
     case 191:
       if (tab == 1) {
-        content = "\n\t\t\t\t<thead>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th></th>\n\t\t\t\t\t\t<th class=\"basic title\">Local Lite</th>\n\t\t\t\t\t\t<th class=\"standard title\">Local Standard</th>\n\t\t\t\t\t\t<th class=\"premium title\">Foreigner Basic</th>\n\t\t\t\t\t\t<th class=\"ultra title\">Foreigner Ultra</th>\n\t\t\t\t\t</tr>\n\t\t\t\t</thead>\n\t\t\t\t<tbody>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th class=\"subtitle\">COMPANY FORMATION</th>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Unlimited Name Availability Check</th>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Document Preparation &amp; Filling</th>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Company Incorporation Process</th>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Company Name Reservation</th>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Government Registration Fee</th>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Lifetime Support/ Instant Response</th>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Digital Corporate Documents</th>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th><span class=\"subtitle\">Company Secretary</span> (1 year)</th>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Annual filing and AGM preparation</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Annual filing government fee</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Local Registered Address with mail handling</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th class=\"subtitle\">PREMIUM COMPANY SET</th>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Company kit</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Company stamp</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Courier fee</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th><span class=\"subtitle\">Nominee Director</span> (No deposit required)</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th class=\"subtitle\">BANKING SUPPORT</th>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Bank account opening assistance with<br/> Singapore banks in our supported banks list</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th class=\"subtitle\">WORK PASS</th>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Application of Employment Pass</th>\n\t\t\t\t\t\t<td>None </td>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th class=\"subtitle\">REQUIREMENT FOR NOMINEE SERVICE</th>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>\n\t\t\t\t\t\t\t* 2 options:<br>\n\t\t\t\t\t\t\t1. Nominee review US$22/month billed yearly<br>\n\t\t\t\t\t\t\t2. Accounting package from US$84/month<br> billed yearly:\n\t\t\t\t\t\t\t<ul class=\"list\">\n\t\t\t\t\t\t\t\t<li>Xero cloud accounting</li>\n\t\t\t\t\t\t\t\t<li>Corppass registration </li>\n\t\t\t\t\t\t\t\t<li>Monthly accounting review</li>\n\t\t\t\t\t\t\t\t<li>Monthly preparation of FSs</li>\n\t\t\t\t\t\t\t\t<li>Annual tax filing (preparation and filing of ECI and Form C/C-S)</li>\n\t\t\t\t\t\t\t\t<li>Annual revenue under S$70k (plan upgradable)</li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</th>\n\t\t\t\t\t\t<td>None </td>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t</tbody>\n\t\t\t";
+        content = "\n\t\t\t\t<thead>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th></th>\n\t\t\t\t\t\t<th class=\"basic title\">Local Lite</th>\n\t\t\t\t\t\t<th class=\"standard title\">Local Standard</th>\n\t\t\t\t\t\t<th class=\"premium title\">Foreigner Basic</th>\n\t\t\t\t\t\t<th class=\"ultra title\">Foreigner Ultra</th>\n\t\t\t\t\t</tr>\n\t\t\t\t</thead>\n\t\t\t\t<tbody>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th class=\"subtitle\">COMPANY FORMATION</th>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Unlimited Name Availability Check</th>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Document Preparation &amp; Filling</th>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Company Incorporation Process</th>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Company Name Reservation</th>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Government Registration Fee</th>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Lifetime Support/ Instant Response</th>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Digital Corporate Documents</th>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th><span class=\"subtitle\">Company Secretary</span> (1 year)</th>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Annual filing and AGM preparation</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Annual filing government fee</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Local Registered Address with mail handling</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th class=\"subtitle\">PREMIUM COMPANY SET</th>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Company kit</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Company stamp</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Courier fee</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th><span class=\"subtitle\">Nominee Director</span> (No deposit required)</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th class=\"subtitle\">BANKING SUPPORT</th>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Bank account opening assistance with<br/> Singapore banks in our supported banks list</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th class=\"subtitle\">WORK PASS</th>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Application of Employment Pass</th>\n\t\t\t\t\t\t<td>None </td>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th class=\"subtitle\">REQUIREMENT FOR NOMINEE SERVICE</th>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>\n\t\t\t\t\t\t\t* 2 options:<br>\n\t\t\t\t\t\t\t1. Nominee review US$22/month billed yearly<br>\n\t\t\t\t\t\t\t2. Accounting package from US$84/month<br> billed yearly:\n\t\t\t\t\t\t\t<ul class=\"list\">\n\t\t\t\t\t\t\t\t<li>Xero cloud accounting</li>\n\t\t\t\t\t\t\t\t<li>Corppass registration </li>\n\t\t\t\t\t\t\t\t<li>Monthly accounting review</li>\n\t\t\t\t\t\t\t\t<li>Monthly preparation of FSs</li>\n\t\t\t\t\t\t\t\t<li>Annual tax filing (preparation and filing of ECI and Form C/C-S)</li>\n\t\t\t\t\t\t\t\t<li>Annual revenue under S$70k (plan upgradable)</li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</th>\n\t\t\t\t\t\t<td>None </td>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t</tbody>\n\t\t\t";
       } else {
         content = "\n\t\t\t\t<thead>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th></th>\n\t\t\t\t\t\t<th class=\"basic title\">Local Lite</th>\n\t\t\t\t\t\t<th class=\"standard title\">Local Standard</th>\n\t\t\t\t\t\t<th class=\"premium title\">Foreigner Basic</th>\n\t\t\t\t\t\t<th class=\"ultra title\">Foreigner Ultra</th>\n\t\t\t\t\t</tr>\n\t\t\t\t</thead>\n\t\t\t\t<tbody>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th><span class=\"subtitle\">COMPANY SECRETARY</span> <span class=\"brand_800\">(1 year)</span></th>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Annual filing and AGM preparation</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Annual filing government fee</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Local Registered Address with mail handling</th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th><span class=\"subtitle\">NOMINEE DIRECTOR</span> <span class=\"brand_800\">(No deposit required)</span></th>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th class=\"subtitle\">REQUIREMENT FOR NOMINEE SERVICE</th>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>\n\t\t\t\t\t\t\t* 2 options:<br>\n\t\t\t\t\t\t\t1. Nominee review US$22/month billed yearly<br>\n\t\t\t\t\t\t\t2. Accounting package from US$84/month billed yearly:\n\t\t\t\t\t\t\t<ul class=\"list\">\n\t\t\t\t\t\t\t\t<li>Xero cloud accounting</li>\n\t\t\t\t\t\t\t\t<li>Corppass registration </li>\n\t\t\t\t\t\t\t\t<li>Monthly accounting review</li>\n\t\t\t\t\t\t\t\t<li>Monthly preparation of FSs</li>\n\t\t\t\t\t\t\t\t<li>Annual tax filing (preparation and filing of ECI <br>and Form C/C-S)</li>\n\t\t\t\t\t\t\t\t<li>Annual revenue under S$70k (plan upgradable)</li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</th>\n\t\t\t\t\t\t<td>None </td>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t\t<td><i class=\"itemCheck\"></i></td>\n\t\t\t\t\t\t<td>None</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</tbody>\n\t\t\t";
       }
@@ -9333,6 +9339,12 @@ function IncorporationPackage(params) {
   useOnClickOutside(wrapperRef, function () {
     setShow(false);
   });
+  var _usePopperTooltip = reactPopperTooltip.usePopperTooltip(),
+    getArrowProps = _usePopperTooltip.getArrowProps,
+    getTooltipProps = _usePopperTooltip.getTooltipProps,
+    setTooltipRef = _usePopperTooltip.setTooltipRef,
+    setTriggerRef = _usePopperTooltip.setTriggerRef,
+    visible = _usePopperTooltip.visible;
   return /*#__PURE__*/React__default.createElement(Layout, null, /*#__PURE__*/React__default.createElement("section", null, /*#__PURE__*/React__default.createElement("div", {
     className: styles$b.btn_top_wrapper + " " + styles$b.Header
   }, /*#__PURE__*/React__default.createElement("div", {
@@ -9383,13 +9395,33 @@ function IncorporationPackage(params) {
   }, /*#__PURE__*/React__default.createElement("div", {
     className: styles$b.package_container
   }, dataPackages.map(function (item, index) {
-    var _item$PackageType, _currentItem$PackageT;
+    var _item$PackageType, _currentItem$PackageT, _style;
     var packageTypeId = item === null || item === void 0 ? void 0 : (_item$PackageType = item.PackageType) === null || _item$PackageType === void 0 ? void 0 : _item$PackageType.id;
     var id = isVN && packageTypeId === 5 && isSwitch ? 4 : packageTypeId;
     var currentItem = dataPackagesTmp.find(function (item) {
       return item.PackageType.id === id;
     });
-    var imgNamePackageVn = sanitizeTitle(currentItem.PackageType.name) + ".svg";
+    var imgNamePackageVn = sanitizeTitle(currentItem.PackageType.name).split('-').join('');
+    var linkImgPackageVn = '';
+    if (isVN) {
+      switch (imgNamePackageVn) {
+        case 'jointventurecompanyindividual':
+          linkImgPackageVn = jointventurecompanyindividual;
+          break;
+        case 'jointventurecompanyorganization':
+          linkImgPackageVn = jointventurecompanyorganization;
+          break;
+        case 'establishmentofwhollyownedforeignenterprise':
+          linkImgPackageVn = establishmentofwhollyownedforeignenterprise;
+          break;
+        case 'establishmentofbranch':
+          linkImgPackageVn = establishmentofbranch;
+          break;
+        case 'establishmentofrepresentativeoffice':
+          linkImgPackageVn = establishmentofrepresentativeoffice;
+          break;
+      }
+    }
     var pacName = isVN ? currentItem.name : currentItem === null || currentItem === void 0 ? void 0 : (_currentItem$PackageT = currentItem.PackageType) === null || _currentItem$PackageT === void 0 ? void 0 : _currentItem$PackageT.name.toLowerCase();
     var packageName = pacName;
     var price = currentItem === null || currentItem === void 0 ? void 0 : currentItem.Services.reduce(function (sum, item) {
@@ -9452,46 +9484,53 @@ function IncorporationPackage(params) {
     }, /*#__PURE__*/React__default.createElement("div", {
       className: styles$b.content_wrapper_vn
     }, /*#__PURE__*/React__default.createElement("img", {
-      src: "/onboarding/custom-public/onboarding/images/items/" + imgNamePackageVn,
-      className: "w-auto",
+      src: linkImgPackageVn,
+      style: {
+        width: 'auto'
+      },
       alt: packageName
     }), /*#__PURE__*/React__default.createElement("div", {
-      className: styles$b.cardPriceVN + " font-weight-bold pt-2"
-    }, "US$", price), /*#__PURE__*/React__default.createElement("div", {
-      className: styles$b.cardNameVN + " pt-2"
-    }, packageName))), packageTypeId === 5 && /*#__PURE__*/React__default.createElement("div", {
-      className: "p-3",
+      className: styles$b.cardPriceVN,
       style: {
-        background: 'rgba(207,207,207,.4)'
+        fontWeight: 'bold',
+        paddingTop: '8px'
+      }
+    }, "US$", price), /*#__PURE__*/React__default.createElement("div", {
+      className: styles$b.cardNameVN,
+      style: {
+        paddingTop: '8px'
+      }
+    }, packageName))), packageTypeId === 5 && /*#__PURE__*/React__default.createElement("div", {
+      style: {
+        background: 'rgba(207,207,207,.4)',
+        padding: '16px'
       }
     }, /*#__PURE__*/React__default.createElement("div", {
-      className: "row align-items-center justify-content-between mx-n1"
+      className: styles$b.switchPackageWrapper
     }, /*#__PURE__*/React__default.createElement("div", {
-      className: "col-auto px-1"
-    }, /*#__PURE__*/React__default.createElement(reactBootstrap.OverlayTrigger, {
-      placement: "bottom-start",
-      overlay: /*#__PURE__*/React__default.createElement(reactBootstrap.Popover, {
-        id: "popover",
-        className: "" + styles$b.info
-      }, /*#__PURE__*/React__default.createElement(reactBootstrap.Popover.Content, {
-        className: "bg-primary rounded",
-        style: {
-          maxWidth: '380px',
-          zIndex: 99
-        }
-      }, /*#__PURE__*/React__default.createElement("p", {
-        className: "text-white mb-0"
-      }, "The price will change depending on whether company member is an individual or a corporation.")))
+      className: styles$b.switchItem
     }, /*#__PURE__*/React__default.createElement("button", {
-      className: "btn p-0"
+      ref: setTriggerRef
     }, /*#__PURE__*/React__default.createElement(reactIcons.IconContext.Provider, {
       value: {
         color: '#007eff'
       }
     }, /*#__PURE__*/React__default.createElement(ai.AiOutlineInfoCircle, {
       size: "20px"
-    }))))), /*#__PURE__*/React__default.createElement("div", {
-      className: "col-auto px-1"
+    }))), visible && /*#__PURE__*/React__default.createElement("div", _extends({
+      ref: setTooltipRef
+    }, getTooltipProps({
+      style: (_style = {
+        width: '300px',
+        backgroundColor: '#007eff',
+        color: '#fff',
+        border: 'none!important'
+      }, _style["border"] = '1px solid rgb(0, 126, 255)', _style.borderRadius = '10px', _style),
+      className: 'tooltip-container'
+    })), /*#__PURE__*/React__default.createElement("div", getArrowProps({
+      className: 'tooltip-arrow'
+    })), "The price will change depending on whether company member is an individual or a corporation.")), /*#__PURE__*/React__default.createElement("div", {
+      className: styles$b.switchItem
     }, /*#__PURE__*/React__default.createElement("div", {
       style: {
         fontWeight: 500,
@@ -9499,15 +9538,26 @@ function IncorporationPackage(params) {
         paddingTop: '2px'
       }
     }, "Individual")), /*#__PURE__*/React__default.createElement("div", {
-      className: "col-auto px-1"
-    }, /*#__PURE__*/React__default.createElement(reactBootstrap.Form.Check, {
-      type: "switch",
-      id: "custom-switch",
-      className: "" + styles$b.formSwich,
+      className: styles$b.switchItem
+    }, /*#__PURE__*/React__default.createElement(react.Switch, {
+      checked: isSwitch,
       onChange: function onChange(e) {
         return handleSwitch(!isSwitch);
+      },
+      style: {
+        background: 'transparent'
       }
-    }))))) : /*#__PURE__*/React__default.createElement("div", null, /*#__PURE__*/React__default.createElement("div", {
+    }, /*#__PURE__*/React__default.createElement("div", {
+      className: styles$b.buttonSwitch,
+      style: {
+        backgroundColor: isSwitch ? '#007eff' : '#ccc'
+      }
+    }, /*#__PURE__*/React__default.createElement("span", {
+      style: {
+        transform: isSwitch ? 'translateX(1.5rem)' : 'translateX(0.25rem)'
+      },
+      className: styles$b.switchToggle
+    }))))))) : /*#__PURE__*/React__default.createElement("div", null, /*#__PURE__*/React__default.createElement("div", {
       className: styles$b[pacName] + " " + styles$b.card_inside,
       style: {
         cursor: 'pointer'
@@ -10708,7 +10758,6 @@ var CheckoutForm = function CheckoutForm(_ref) {
   var _useState3 = React.useState(),
     selectedCountry = _useState3[0],
     setSelectedCountry = _useState3[1];
-  console.log(orderCode);
   var _useForm = reactHookForm.useForm(),
     register = _useForm.register,
     handleSubmit = _useForm.handleSubmit,
@@ -10801,7 +10850,7 @@ var CheckoutForm = function CheckoutForm(_ref) {
   var handleChangeSelect = function handleChangeSelect(data) {
     setSelectedCountry(data.name);
   };
-  return /*#__PURE__*/React__default.createElement(reactBootstrap.Form, {
+  return /*#__PURE__*/React__default.createElement("form", {
     onSubmit: handleSubmit(onSubmit),
     style: {
       marginLeft: '20px',
@@ -10824,7 +10873,7 @@ var CheckoutForm = function CheckoutForm(_ref) {
     placeholder: "Card holder name",
     autoComplete: "off"
   }))), errors && errors.cardholder_name && /*#__PURE__*/React__default.createElement("p", {
-    className: "m-0 text-danger " + style$1.ErrorMessage
+    className: "" + style$1.ErrorMessage
   }, errors.cardholder_name.message)), /*#__PURE__*/React__default.createElement("div", {
     className: style$1.CardDetails
   }, /*#__PURE__*/React__default.createElement("p", null, "Card details"), /*#__PURE__*/React__default.createElement("div", null, /*#__PURE__*/React__default.createElement(reactStripeJs.CardElement, {
@@ -10835,21 +10884,30 @@ var CheckoutForm = function CheckoutForm(_ref) {
       hidePostalCode: true
     }
   })), error && /*#__PURE__*/React__default.createElement("p", {
-    className: "m-0 text-danger " + style$1.ErrorMessage
+    className: "" + style$1.ErrorMessage
   }, error.message)), /*#__PURE__*/React__default.createElement("div", {
     className: "row " + style$1.BillingInformation
   }, /*#__PURE__*/React__default.createElement("p", {
-    className: "col-12"
+    style: {
+      flex: '0 0 100%',
+      maxWidth: '100%'
+    }
   }, "Billing information"), /*#__PURE__*/React__default.createElement("div", {
-    className: "col-12"
+    style: {
+      flex: '0 0 100%',
+      maxWidth: '100%'
+    }
   }, /*#__PURE__*/React__default.createElement(Select__default, {
     options: countryList,
     styles: customStyles$2,
     onChange: handleChangeSelect
   }), !selectedCountry && isSubmitted && /*#__PURE__*/React__default.createElement("p", {
-    className: "m-0 text-danger " + style$1.ErrorMessage
+    className: "" + style$1.ErrorMessage
   }, "Country is required")), /*#__PURE__*/React__default.createElement("div", {
-    className: "col-12"
+    style: {
+      flex: '0 0 100%',
+      maxWidth: '100%'
+    }
   }, /*#__PURE__*/React__default.createElement("input", _extends({
     type: 'text'
   }, register('address_line1', {
@@ -10861,16 +10919,23 @@ var CheckoutForm = function CheckoutForm(_ref) {
     placeholder: "Address line 1",
     autoComplete: "off"
   })), errors && errors.address_line1 && /*#__PURE__*/React__default.createElement("p", {
-    className: "m-0 text-danger " + style$1.ErrorMessage
+    className: "" + style$1.ErrorMessage
   }, errors.address_line1.message)), /*#__PURE__*/React__default.createElement("div", {
-    className: "col-12"
+    style: {
+      flex: '0 0 100%',
+      maxWidth: '100%'
+    }
   }, /*#__PURE__*/React__default.createElement("input", _extends({
     type: 'text'
   }, register('address_line2'), {
     placeholder: "Address line 2 (optional)",
     autoComplete: "off"
   }))), /*#__PURE__*/React__default.createElement("div", {
-    className: "col-6"
+    style: {
+      flex: '0 0 50%',
+      maxWidth: '50%',
+      paddingRight: '15px'
+    }
   }, /*#__PURE__*/React__default.createElement("input", _extends({
     type: 'text'
   }, register('address_city', {
@@ -10882,9 +10947,13 @@ var CheckoutForm = function CheckoutForm(_ref) {
     placeholder: "City",
     autoComplete: "off"
   })), errors && errors.address_city && /*#__PURE__*/React__default.createElement("p", {
-    className: "m-0 text-danger " + style$1.ErrorMessage
+    className: "" + style$1.ErrorMessage
   }, errors.address_city.message)), /*#__PURE__*/React__default.createElement("div", {
-    className: "col-6"
+    style: {
+      flex: '0 0 50%',
+      maxWidth: '50%',
+      paddingLeft: '15px'
+    }
   }, /*#__PURE__*/React__default.createElement("input", _extends({
     type: 'text'
   }, register('address_state', {
@@ -10896,9 +10965,13 @@ var CheckoutForm = function CheckoutForm(_ref) {
     placeholder: "State",
     autoComplete: "off"
   })), errors && errors.address_state && /*#__PURE__*/React__default.createElement("p", {
-    className: "m-0 text-danger " + style$1.ErrorMessage
+    className: "" + style$1.ErrorMessage
   }, errors.address_state.message)), /*#__PURE__*/React__default.createElement("div", {
-    className: "col-6"
+    style: {
+      flex: '0 0 50%',
+      maxWidth: '50%',
+      paddingRight: '15px'
+    }
   }, /*#__PURE__*/React__default.createElement("input", _extends({
     type: 'text'
   }, register('address_zip', {
@@ -10910,7 +10983,7 @@ var CheckoutForm = function CheckoutForm(_ref) {
     placeholder: "Zip",
     autoComplete: "off"
   })), errors && errors.address_zip && /*#__PURE__*/React__default.createElement("p", {
-    className: "m-0 text-danger " + style$1.ErrorMessage
+    className: "" + style$1.ErrorMessage
   }, errors.address_zip.message)))), /*#__PURE__*/React__default.createElement("div", {
     style: {
       textAlign: 'center',
@@ -10935,10 +11008,12 @@ var PaymentModal = function PaymentModal(_ref3) {
     show = _ref3.show,
     onReceiveData = _ref3.onReceiveData,
     orderCode = _ref3.orderCode,
-    countryList = _ref3.countryList;
+    countryList = _ref3.countryList,
+    wrapperRef = _ref3.wrapperRef;
   return /*#__PURE__*/React__default.createElement(Modal, {
     show: show
   }, /*#__PURE__*/React__default.createElement("div", {
+    ref: wrapperRef,
     className: style$1.modalWrapper
   }, /*#__PURE__*/React__default.createElement("div", {
     className: style$1.modal
@@ -11224,6 +11299,12 @@ function OrderInformation(params) {
     setAllow(true);
     setIsLoading(false);
   };
+  var wrapperRef = React.useRef(null);
+  useOnClickOutside(wrapperRef, function () {
+    setShow(false);
+    setAllow(true);
+    setIsLoading(false);
+  });
   return /*#__PURE__*/React__default.createElement(Layout, null, loading ? /*#__PURE__*/React__default.createElement("div", {
     className: style$1.loaderWrapper
   }, /*#__PURE__*/React__default.createElement(bi.BiLoaderAlt, {
@@ -11358,7 +11439,7 @@ function OrderInformation(params) {
     style: {
       lineHeight: '0'
     }
-  }, /*#__PURE__*/React__default.createElement(reactBootstrap.Form.Check, {
+  }, /*#__PURE__*/React__default.createElement("input", {
     type: "radio",
     id: "card",
     value: "card",
@@ -11368,7 +11449,7 @@ function OrderInformation(params) {
     onChange: function onChange(e) {
       return handleChange(e.target.value);
     }
-  }), /*#__PURE__*/React__default.createElement(reactBootstrap.Form.Label, {
+  }), /*#__PURE__*/React__default.createElement("label", {
     htmlFor: "card"
   }, /*#__PURE__*/React__default.createElement("img", {
     src: cardStripe,
@@ -11385,7 +11466,7 @@ function OrderInformation(params) {
     style: {
       lineHeight: '0'
     }
-  }, /*#__PURE__*/React__default.createElement(reactBootstrap.Form.Check, {
+  }, /*#__PURE__*/React__default.createElement("input", {
     type: "radio",
     id: "bank",
     value: "bank",
@@ -11394,7 +11475,7 @@ function OrderInformation(params) {
     onChange: function onChange(e) {
       return handleChange(e.target.value);
     }
-  }), /*#__PURE__*/React__default.createElement(reactBootstrap.Form.Label, {
+  }), /*#__PURE__*/React__default.createElement("label", {
     htmlFor: "bank"
   }, /*#__PURE__*/React__default.createElement("img", {
     src: bankTransfer,
@@ -11536,11 +11617,12 @@ function OrderInformation(params) {
     data: orderInfo,
     countryList: countryList,
     orderCode: queryOrderCode,
-    show: show
+    show: show,
+    wrapperRef: wrapperRef
   })));
 }
 
-var style$2 = {"Title":"_styles-module__Title__2xhcx","Content":"_styles-module__Content__2-IAQ","Footer":"_styles-module__Footer__h6O8h","highlightBtn":"_styles-module__highlightBtn__1B57N"};
+var style$2 = {"Title":"_styles-module__Title__2xhcx","Content":"_styles-module__Content__2-IAQ","Footer":"_styles-module__Footer__h6O8h","highlightBtn":"_styles-module__highlightBtn__1B57N","trustPilotWrapper":"_styles-module__trustPilotWrapper__3W0qR"};
 
 var moveToBanking = function moveToBanking(queryOrderCode) {
   var data = JSON.parse(window.localStorage.getItem('layout'));
@@ -11834,7 +11916,7 @@ function OnboardingNotification() {
     }
   }, [queryOrderCode]);
   return /*#__PURE__*/React__default.createElement(Layout, null, /*#__PURE__*/React__default.createElement("div", null, /*#__PURE__*/React__default.createElement("div", {
-    className: "d-none d-lg-block",
+    className: style$2.trustPilotWrapper,
     style: {
       height: '50px'
     }

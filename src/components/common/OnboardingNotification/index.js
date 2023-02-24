@@ -528,7 +528,10 @@ export default function OnboardingNotification() {
   return (
     <Layout>
       <div>
-        <div className='d-none d-lg-block' style={{ height: '50px' }}></div>
+        <div
+          className={style.trustPilotWrapper}
+          style={{ height: '50px' }}
+        ></div>
         {pathname && data && getBody(pathname, data, queryOrderCode)}
       </div>
       <div style={{ color: '#717171' }}>

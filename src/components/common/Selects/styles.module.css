@@ -15,8 +15,8 @@
 
 .dropdown_toggle {
   position: relative;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 20px;
   overflow: hidden;
   width: 100%;
   padding: 8px 0;
@@ -29,6 +29,9 @@
 }
 
 .dropdown_menu {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   padding-bottom: 0;
   z-index: 2;

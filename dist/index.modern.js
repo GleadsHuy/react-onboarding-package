@@ -14,7 +14,6 @@ import leftObdImg from './bg-left-obd~UgZSiaCI.png';
 import menuNavImg from './menu-nav~AOjLftbh.png';
 import tabletBuildImg from './bg-tablet-build~kDAEKiYW.svg';
 import obdIncorp2Img from './obd-incorporation-2~cvSdbBtL.png';
-import { Form, OverlayTrigger, Popover } from 'react-bootstrap';
 import { useForm, useFormState, useFieldArray, Controller } from 'react-hook-form';
 import Select, { components } from 'react-select';
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -46,6 +45,9 @@ import comparisonTable from './comparison-table~bpwyRZHM.png';
 import buildingImg from './building~IFwjSqIH.png';
 import { MdAddCircle } from 'react-icons/md';
 import { HiMinusCircle } from 'react-icons/hi';
+import { usePopperTooltip } from 'react-popper-tooltip';
+import 'react-popper-tooltip/dist/styles.css';
+import { Switch } from '@headlessui/react';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
 import pacbasic from './pac-basic~AyzXROgI.png';
 import pacpremium from './pac-premium~XjDmcCNY.png';
@@ -54,6 +56,11 @@ import locallite from './local-lite~TJhbcTdX.png';
 import localstandard from './local-standard~AyzXROgI.png';
 import foreignerbasic from './foreigner-basic~uQZFFwrd.png';
 import foreignerultra from './foreigner-ultra~XjDmcCNY.png';
+import jointventurecompanyorganization from './joint-venture-company-organization~ygCSDNoP.svg';
+import jointventurecompanyindividual from './joint-venture-company-individual~VtMqmgzt.svg';
+import establishmentofwhollyownedforeignenterprise from './establishment-of-wholly-owned-foreign-enterprise~mFOPCCSv.svg';
+import establishmentofbranch from './establishment-of-branch~LiXqOEXr.svg';
+import establishmentofrepresentativeoffice from './establishment-of-representative-office~RtWuekwm.svg';
 import { RiSubtractFill } from 'react-icons/ri';
 import { Elements, useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
@@ -8513,7 +8520,7 @@ function IncorporationEntityNameCheck({
       flexDirection: 'column',
       justifyContent: 'space-between'
     }
-  }, /*#__PURE__*/React.createElement(Form, {
+  }, /*#__PURE__*/React.createElement("form", {
     noValidate: true
   }, /*#__PURE__*/React.createElement("div", {
     className: `${styles$a.form_header} ${styles$a.Header}`
@@ -8666,8 +8673,7 @@ function IncorporationEntityNameCheck({
         padding: '0 8px',
         marginTop: '4px'
       }
-    }, /*#__PURE__*/React.createElement(Form.Control.Feedback, {
-      type: "invalid",
+    }, /*#__PURE__*/React.createElement("div", {
       className: `${errors !== null && errors !== void 0 && errors.companyName ? styles$a.d_block : styles$a.d_none}`
     }, /*#__PURE__*/React.createElement("span", {
       style: {
@@ -8836,7 +8842,7 @@ function IncorporationEntityNameCheck({
   }))))))));
 }
 
-var styles$b = {"btn_top_wrapper":"_styles-module__btn_top_wrapper__34DmI","btn_top":"_styles-module__btn_top__3qqS1","button":"_styles-module__button__3860g","title":"_styles-module__title__2BlXc","description_wrapper":"_styles-module__description_wrapper__3Nlot","description":"_styles-module__description__3VahP","comparison_wrapper":"_styles-module__comparison_wrapper__3GLBr","comparison_top":"_styles-module__comparison_top__nxU8b","loader_wrapper":"_styles-module__loader_wrapper__3VbNy","package_container":"_styles-module__package_container__2x8Ni","card_wrapper":"_styles-module__card_wrapper__3w1_k","item_height":"_styles-module__item_height__6F5fK","content_wrapper_vn":"_styles-module__content_wrapper_vn__2QOXs","card":"_styles-module__card__3N8iG","card_inside":"_styles-module__card_inside__2aMYN","img_wrapper":"_styles-module__img_wrapper__hhqdG","cardName_wrapper":"_styles-module__cardName_wrapper__3OX3r","cardName":"_styles-module__cardName__22pk0","cardNameVN":"_styles-module__cardNameVN__7JTA6","cardPrice":"_styles-module__cardPrice__lMNoF","cardPriceVN":"_styles-module__cardPriceVN__sunAZ","cardDes":"_styles-module__cardDes__123Dc","basic":"_styles-module__basic__1pZey","local-lite":"_styles-module__local-lite__1fRKW","startup-for-locals":"_styles-module__startup-for-locals__2B7pn","standard":"_styles-module__standard__3mC0T","local-standard":"_styles-module__local-standard__3Fr5q","premium":"_styles-module__premium__10UG7","foreigner-basic":"_styles-module__foreigner-basic__1CpII","standard-with-employment-pass":"_styles-module__standard-with-employment-pass__23Y2O","foreigner-ultra":"_styles-module__foreigner-ultra__1mWaS","formSwich":"_styles-module__formSwich__1Glki","info":"_styles-module__info__1NfHz","note":"_styles-module__note__3O97i","note_vn":"_styles-module__note_vn__2QqH5","modal_wrapper":"_styles-module__modal_wrapper__260T9","fadeIn":"_styles-module__fadeIn__21U4U","close_button":"_styles-module__close_button__4X6g2","tab_container":"_styles-module__tab_container__3ZOMY","tab_wrapper":"_styles-module__tab_wrapper__3Mg2u","tab_item":"_styles-module__tab_item__36v3_","active_tab":"_styles-module__active_tab__g8EO3","dialog":"_styles-module__dialog___aI90","headerModal":"_styles-module__headerModal__1TU3P","bodyModal":"_styles-module__bodyModal__1hv_K","Header":"_styles-module__Header__1hw-O","comparison_bottom_wrapper":"_styles-module__comparison_bottom_wrapper__1rqx-","comparison_bottom":"_styles-module__comparison_bottom__3PrcN","comparison_btn":"_styles-module__comparison_btn__3qyHB","comparison_img":"_styles-module__comparison_img__3RYJD","btn_bottom_wrapper":"_styles-module__btn_bottom_wrapper__3kj8Y","btn_back_bottom":"_styles-module__btn_back_bottom__1fOjL","Body":"_styles-module__Body__2PprN","package":"_styles-module__package__110ld","card_wrapper_sg":"_styles-module__card_wrapper_sg__19DVk"};
+var styles$b = {"btn_top_wrapper":"_styles-module__btn_top_wrapper__34DmI","btn_top":"_styles-module__btn_top__3qqS1","button":"_styles-module__button__3860g","title":"_styles-module__title__2BlXc","description_wrapper":"_styles-module__description_wrapper__3Nlot","description":"_styles-module__description__3VahP","comparison_wrapper":"_styles-module__comparison_wrapper__3GLBr","comparison_top":"_styles-module__comparison_top__nxU8b","loader_wrapper":"_styles-module__loader_wrapper__3VbNy","package_container":"_styles-module__package_container__2x8Ni","card_wrapper":"_styles-module__card_wrapper__3w1_k","item_height":"_styles-module__item_height__6F5fK","content_wrapper_vn":"_styles-module__content_wrapper_vn__2QOXs","card":"_styles-module__card__3N8iG","card_inside":"_styles-module__card_inside__2aMYN","img_wrapper":"_styles-module__img_wrapper__hhqdG","cardName_wrapper":"_styles-module__cardName_wrapper__3OX3r","cardName":"_styles-module__cardName__22pk0","cardNameVN":"_styles-module__cardNameVN__7JTA6","cardPrice":"_styles-module__cardPrice__lMNoF","cardPriceVN":"_styles-module__cardPriceVN__sunAZ","cardDes":"_styles-module__cardDes__123Dc","basic":"_styles-module__basic__1pZey","local-lite":"_styles-module__local-lite__1fRKW","startup-for-locals":"_styles-module__startup-for-locals__2B7pn","standard":"_styles-module__standard__3mC0T","local-standard":"_styles-module__local-standard__3Fr5q","premium":"_styles-module__premium__10UG7","foreigner-basic":"_styles-module__foreigner-basic__1CpII","standard-with-employment-pass":"_styles-module__standard-with-employment-pass__23Y2O","foreigner-ultra":"_styles-module__foreigner-ultra__1mWaS","switchPackageWrapper":"_styles-module__switchPackageWrapper__3NhDk","switchItem":"_styles-module__switchItem__15JW8","buttonSwitch":"_styles-module__buttonSwitch__1iJsP","switchToggle":"_styles-module__switchToggle__3J5ey","formSwich":"_styles-module__formSwich__1Glki","info":"_styles-module__info__1NfHz","note":"_styles-module__note__3O97i","note_vn":"_styles-module__note_vn__2QqH5","modal_wrapper":"_styles-module__modal_wrapper__260T9","fadeIn":"_styles-module__fadeIn__21U4U","close_button":"_styles-module__close_button__4X6g2","tab_container":"_styles-module__tab_container__3ZOMY","tab_wrapper":"_styles-module__tab_wrapper__3Mg2u","tab_item":"_styles-module__tab_item__36v3_","active_tab":"_styles-module__active_tab__g8EO3","dialog":"_styles-module__dialog___aI90","headerModal":"_styles-module__headerModal__1TU3P","bodyModal":"_styles-module__bodyModal__1hv_K","Header":"_styles-module__Header__1hw-O","comparison_bottom_wrapper":"_styles-module__comparison_bottom_wrapper__1rqx-","comparison_bottom":"_styles-module__comparison_bottom__3PrcN","comparison_btn":"_styles-module__comparison_btn__3qyHB","comparison_img":"_styles-module__comparison_img__3RYJD","btn_bottom_wrapper":"_styles-module__btn_bottom_wrapper__3kj8Y","btn_back_bottom":"_styles-module__btn_back_bottom__1fOjL","Body":"_styles-module__Body__2PprN","package":"_styles-module__package__110ld","card_wrapper_sg":"_styles-module__card_wrapper_sg__19DVk"};
 
 function popupPackages(country_id, entity_type_id, tab) {
   let content = '';
@@ -8978,7 +8984,6 @@ function popupPackages(country_id, entity_type_id, tab) {
 						<td><i class="itemCheck"></i></td>
 						<td><i class="itemCheck"></i></td>
 					</tr>
-			
 					<tr>
 						<th>Lifetime Support/ Instant Response</th>
 						<td><i class="itemCheck"></i></td>
@@ -9916,6 +9921,13 @@ function IncorporationPackage(params) {
   useOnClickOutside(wrapperRef, () => {
     setShow(false);
   });
+  const {
+    getArrowProps,
+    getTooltipProps,
+    setTooltipRef,
+    setTriggerRef,
+    visible
+  } = usePopperTooltip();
   return /*#__PURE__*/React.createElement(Layout, null, /*#__PURE__*/React.createElement("section", null, /*#__PURE__*/React.createElement("div", {
     className: `${styles$b.btn_top_wrapper} ${styles$b.Header}`
   }, /*#__PURE__*/React.createElement("div", {
@@ -9970,7 +9982,27 @@ function IncorporationPackage(params) {
     const packageTypeId = item === null || item === void 0 ? void 0 : (_item$PackageType = item.PackageType) === null || _item$PackageType === void 0 ? void 0 : _item$PackageType.id;
     let id = isVN && packageTypeId === 5 && isSwitch ? 4 : packageTypeId;
     let currentItem = dataPackagesTmp.find(item => item.PackageType.id === id);
-    let imgNamePackageVn = `${sanitizeTitle(currentItem.PackageType.name)}.svg`;
+    let imgNamePackageVn = sanitizeTitle(currentItem.PackageType.name).split('-').join('');
+    let linkImgPackageVn = '';
+    if (isVN) {
+      switch (imgNamePackageVn) {
+        case 'jointventurecompanyindividual':
+          linkImgPackageVn = jointventurecompanyindividual;
+          break;
+        case 'jointventurecompanyorganization':
+          linkImgPackageVn = jointventurecompanyorganization;
+          break;
+        case 'establishmentofwhollyownedforeignenterprise':
+          linkImgPackageVn = establishmentofwhollyownedforeignenterprise;
+          break;
+        case 'establishmentofbranch':
+          linkImgPackageVn = establishmentofbranch;
+          break;
+        case 'establishmentofrepresentativeoffice':
+          linkImgPackageVn = establishmentofrepresentativeoffice;
+          break;
+      }
+    }
     let pacName = isVN ? currentItem.name : currentItem === null || currentItem === void 0 ? void 0 : (_currentItem$PackageT = currentItem.PackageType) === null || _currentItem$PackageT === void 0 ? void 0 : _currentItem$PackageT.name.toLowerCase();
     let packageName = pacName;
     const price = currentItem === null || currentItem === void 0 ? void 0 : currentItem.Services.reduce((sum, item) => {
@@ -10031,46 +10063,55 @@ function IncorporationPackage(params) {
     }, /*#__PURE__*/React.createElement("div", {
       className: styles$b.content_wrapper_vn
     }, /*#__PURE__*/React.createElement("img", {
-      src: `/onboarding/custom-public/onboarding/images/items/${imgNamePackageVn}`,
-      className: `w-auto`,
+      src: linkImgPackageVn,
+      style: {
+        width: 'auto'
+      },
       alt: packageName
     }), /*#__PURE__*/React.createElement("div", {
-      className: `${styles$b.cardPriceVN} font-weight-bold pt-2`
-    }, "US$", price), /*#__PURE__*/React.createElement("div", {
-      className: `${styles$b.cardNameVN} pt-2`
-    }, packageName))), packageTypeId === 5 && /*#__PURE__*/React.createElement("div", {
-      className: "p-3",
+      className: styles$b.cardPriceVN,
       style: {
-        background: 'rgba(207,207,207,.4)'
+        fontWeight: 'bold',
+        paddingTop: '8px'
+      }
+    }, "US$", price), /*#__PURE__*/React.createElement("div", {
+      className: styles$b.cardNameVN,
+      style: {
+        paddingTop: '8px'
+      }
+    }, packageName))), packageTypeId === 5 && /*#__PURE__*/React.createElement("div", {
+      style: {
+        background: 'rgba(207,207,207,.4)',
+        padding: '16px'
       }
     }, /*#__PURE__*/React.createElement("div", {
-      className: `row align-items-center justify-content-between mx-n1`
+      className: styles$b.switchPackageWrapper
     }, /*#__PURE__*/React.createElement("div", {
-      className: "col-auto px-1"
-    }, /*#__PURE__*/React.createElement(OverlayTrigger, {
-      placement: "bottom-start",
-      overlay: /*#__PURE__*/React.createElement(Popover, {
-        id: "popover",
-        className: `${styles$b.info}`
-      }, /*#__PURE__*/React.createElement(Popover.Content, {
-        className: "bg-primary rounded",
-        style: {
-          maxWidth: '380px',
-          zIndex: 99
-        }
-      }, /*#__PURE__*/React.createElement("p", {
-        className: "text-white mb-0"
-      }, "The price will change depending on whether company member is an individual or a corporation.")))
+      className: styles$b.switchItem
     }, /*#__PURE__*/React.createElement("button", {
-      className: "btn p-0"
+      ref: setTriggerRef
     }, /*#__PURE__*/React.createElement(IconContext.Provider, {
       value: {
         color: '#007eff'
       }
     }, /*#__PURE__*/React.createElement(AiOutlineInfoCircle, {
       size: "20px"
-    }))))), /*#__PURE__*/React.createElement("div", {
-      className: "col-auto px-1"
+    }))), visible && /*#__PURE__*/React.createElement("div", Object.assign({
+      ref: setTooltipRef
+    }, getTooltipProps({
+      style: {
+        width: '300px',
+        backgroundColor: '#007eff',
+        color: '#fff',
+        border: 'none!important',
+        border: '1px solid rgb(0, 126, 255)',
+        borderRadius: '10px'
+      },
+      className: 'tooltip-container'
+    })), /*#__PURE__*/React.createElement("div", getArrowProps({
+      className: 'tooltip-arrow'
+    })), "The price will change depending on whether company member is an individual or a corporation.")), /*#__PURE__*/React.createElement("div", {
+      className: styles$b.switchItem
     }, /*#__PURE__*/React.createElement("div", {
       style: {
         fontWeight: 500,
@@ -10078,13 +10119,24 @@ function IncorporationPackage(params) {
         paddingTop: '2px'
       }
     }, "Individual")), /*#__PURE__*/React.createElement("div", {
-      className: "col-auto px-1"
-    }, /*#__PURE__*/React.createElement(Form.Check, {
-      type: "switch",
-      id: "custom-switch",
-      className: `${styles$b.formSwich}`,
-      onChange: e => handleSwitch(!isSwitch)
-    }))))) : /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      className: styles$b.switchItem
+    }, /*#__PURE__*/React.createElement(Switch, {
+      checked: isSwitch,
+      onChange: e => handleSwitch(!isSwitch),
+      style: {
+        background: 'transparent'
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: styles$b.buttonSwitch,
+      style: {
+        backgroundColor: isSwitch ? '#007eff' : '#ccc'
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        transform: isSwitch ? 'translateX(1.5rem)' : 'translateX(0.25rem)'
+      },
+      className: styles$b.switchToggle
+    }))))))) : /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
       className: `${styles$b[pacName]} ${styles$b.card_inside}`,
       style: {
         cursor: 'pointer'
@@ -11114,7 +11166,6 @@ const CheckoutForm = ({
   const [error, setError] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState();
-  console.log(orderCode);
   const {
     register,
     handleSubmit,
@@ -11201,7 +11252,7 @@ const CheckoutForm = ({
   const handleChangeSelect = data => {
     setSelectedCountry(data.name);
   };
-  return /*#__PURE__*/React.createElement(Form, {
+  return /*#__PURE__*/React.createElement("form", {
     onSubmit: handleSubmit(onSubmit),
     style: {
       marginLeft: '20px',
@@ -11224,7 +11275,7 @@ const CheckoutForm = ({
     placeholder: "Card holder name",
     autoComplete: "off"
   }))), errors && errors.cardholder_name && /*#__PURE__*/React.createElement("p", {
-    className: `m-0 text-danger ${style$1.ErrorMessage}`
+    className: `${style$1.ErrorMessage}`
   }, errors.cardholder_name.message)), /*#__PURE__*/React.createElement("div", {
     className: style$1.CardDetails
   }, /*#__PURE__*/React.createElement("p", null, "Card details"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(CardElement, {
@@ -11235,21 +11286,30 @@ const CheckoutForm = ({
       hidePostalCode: true
     }
   })), error && /*#__PURE__*/React.createElement("p", {
-    className: `m-0 text-danger ${style$1.ErrorMessage}`
+    className: `${style$1.ErrorMessage}`
   }, error.message)), /*#__PURE__*/React.createElement("div", {
     className: `row ${style$1.BillingInformation}`
   }, /*#__PURE__*/React.createElement("p", {
-    className: "col-12"
+    style: {
+      flex: '0 0 100%',
+      maxWidth: '100%'
+    }
   }, "Billing information"), /*#__PURE__*/React.createElement("div", {
-    className: "col-12"
+    style: {
+      flex: '0 0 100%',
+      maxWidth: '100%'
+    }
   }, /*#__PURE__*/React.createElement(Select, {
     options: countryList,
     styles: customStyles$2,
     onChange: handleChangeSelect
   }), !selectedCountry && isSubmitted && /*#__PURE__*/React.createElement("p", {
-    className: `m-0 text-danger ${style$1.ErrorMessage}`
+    className: `${style$1.ErrorMessage}`
   }, "Country is required")), /*#__PURE__*/React.createElement("div", {
-    className: "col-12"
+    style: {
+      flex: '0 0 100%',
+      maxWidth: '100%'
+    }
   }, /*#__PURE__*/React.createElement("input", Object.assign({
     type: 'text'
   }, register('address_line1', {
@@ -11261,16 +11321,23 @@ const CheckoutForm = ({
     placeholder: "Address line 1",
     autoComplete: "off"
   })), errors && errors.address_line1 && /*#__PURE__*/React.createElement("p", {
-    className: `m-0 text-danger ${style$1.ErrorMessage}`
+    className: `${style$1.ErrorMessage}`
   }, errors.address_line1.message)), /*#__PURE__*/React.createElement("div", {
-    className: "col-12"
+    style: {
+      flex: '0 0 100%',
+      maxWidth: '100%'
+    }
   }, /*#__PURE__*/React.createElement("input", Object.assign({
     type: 'text'
   }, register('address_line2'), {
     placeholder: "Address line 2 (optional)",
     autoComplete: "off"
   }))), /*#__PURE__*/React.createElement("div", {
-    className: "col-6"
+    style: {
+      flex: '0 0 50%',
+      maxWidth: '50%',
+      paddingRight: '15px'
+    }
   }, /*#__PURE__*/React.createElement("input", Object.assign({
     type: 'text'
   }, register('address_city', {
@@ -11282,9 +11349,13 @@ const CheckoutForm = ({
     placeholder: "City",
     autoComplete: "off"
   })), errors && errors.address_city && /*#__PURE__*/React.createElement("p", {
-    className: `m-0 text-danger ${style$1.ErrorMessage}`
+    className: `${style$1.ErrorMessage}`
   }, errors.address_city.message)), /*#__PURE__*/React.createElement("div", {
-    className: "col-6"
+    style: {
+      flex: '0 0 50%',
+      maxWidth: '50%',
+      paddingLeft: '15px'
+    }
   }, /*#__PURE__*/React.createElement("input", Object.assign({
     type: 'text'
   }, register('address_state', {
@@ -11296,9 +11367,13 @@ const CheckoutForm = ({
     placeholder: "State",
     autoComplete: "off"
   })), errors && errors.address_state && /*#__PURE__*/React.createElement("p", {
-    className: `m-0 text-danger ${style$1.ErrorMessage}`
+    className: `${style$1.ErrorMessage}`
   }, errors.address_state.message)), /*#__PURE__*/React.createElement("div", {
-    className: "col-6"
+    style: {
+      flex: '0 0 50%',
+      maxWidth: '50%',
+      paddingRight: '15px'
+    }
   }, /*#__PURE__*/React.createElement("input", Object.assign({
     type: 'text'
   }, register('address_zip', {
@@ -11310,7 +11385,7 @@ const CheckoutForm = ({
     placeholder: "Zip",
     autoComplete: "off"
   })), errors && errors.address_zip && /*#__PURE__*/React.createElement("p", {
-    className: `m-0 text-danger ${style$1.ErrorMessage}`
+    className: `${style$1.ErrorMessage}`
   }, errors.address_zip.message)))), /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: 'center',
@@ -11335,11 +11410,13 @@ const PaymentModal = ({
   show,
   onReceiveData,
   orderCode,
-  countryList
+  countryList,
+  wrapperRef
 }) => {
   return /*#__PURE__*/React.createElement(Modal, {
     show: show
   }, /*#__PURE__*/React.createElement("div", {
+    ref: wrapperRef,
     className: style$1.modalWrapper
   }, /*#__PURE__*/React.createElement("div", {
     className: style$1.modal
@@ -11596,6 +11673,12 @@ function OrderInformation(params) {
     setAllow(true);
     setIsLoading(false);
   };
+  const wrapperRef = useRef(null);
+  useOnClickOutside(wrapperRef, () => {
+    setShow(false);
+    setAllow(true);
+    setIsLoading(false);
+  });
   return /*#__PURE__*/React.createElement(Layout, null, loading ? /*#__PURE__*/React.createElement("div", {
     className: style$1.loaderWrapper
   }, /*#__PURE__*/React.createElement(BiLoaderAlt, {
@@ -11726,7 +11809,7 @@ function OrderInformation(params) {
     style: {
       lineHeight: '0'
     }
-  }, /*#__PURE__*/React.createElement(Form.Check, {
+  }, /*#__PURE__*/React.createElement("input", {
     type: "radio",
     id: "card",
     value: "card",
@@ -11734,7 +11817,7 @@ function OrderInformation(params) {
     defaultChecked: true,
     className: style$1.formCheck,
     onChange: e => handleChange(e.target.value)
-  }), /*#__PURE__*/React.createElement(Form.Label, {
+  }), /*#__PURE__*/React.createElement("label", {
     htmlFor: "card"
   }, /*#__PURE__*/React.createElement("img", {
     src: cardStripe,
@@ -11751,14 +11834,14 @@ function OrderInformation(params) {
     style: {
       lineHeight: '0'
     }
-  }, /*#__PURE__*/React.createElement(Form.Check, {
+  }, /*#__PURE__*/React.createElement("input", {
     type: "radio",
     id: "bank",
     value: "bank",
     name: "payment",
     className: style$1.formCheck,
     onChange: e => handleChange(e.target.value)
-  }), /*#__PURE__*/React.createElement(Form.Label, {
+  }), /*#__PURE__*/React.createElement("label", {
     htmlFor: "bank"
   }, /*#__PURE__*/React.createElement("img", {
     src: bankTransfer,
@@ -11898,11 +11981,12 @@ function OrderInformation(params) {
     data: orderInfo,
     countryList: countryList,
     orderCode: queryOrderCode,
-    show: show
+    show: show,
+    wrapperRef: wrapperRef
   })));
 }
 
-var style$2 = {"Title":"_styles-module__Title__2xhcx","Content":"_styles-module__Content__2-IAQ","Footer":"_styles-module__Footer__h6O8h","highlightBtn":"_styles-module__highlightBtn__1B57N"};
+var style$2 = {"Title":"_styles-module__Title__2xhcx","Content":"_styles-module__Content__2-IAQ","Footer":"_styles-module__Footer__h6O8h","highlightBtn":"_styles-module__highlightBtn__1B57N","trustPilotWrapper":"_styles-module__trustPilotWrapper__3W0qR"};
 
 const moveToBanking = queryOrderCode => {
   let data = JSON.parse(window.localStorage.getItem('layout'));
@@ -12190,7 +12274,7 @@ function OnboardingNotification() {
     }
   }, [queryOrderCode]);
   return /*#__PURE__*/React.createElement(Layout, null, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-    className: "d-none d-lg-block",
+    className: style$2.trustPilotWrapper,
     style: {
       height: '50px'
     }

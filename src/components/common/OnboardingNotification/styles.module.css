@@ -56,12 +56,19 @@
   background-color: #2c2c51;
 }
 
+.trustPilotWrapper {
+  display: block;
+}
+
 @media (max-width: 991px) {
   .Footer {
     flex-direction: column;
   }
   .highlightBtn {
     background-color: #2c2c51;
+  }
+  .trustPilotWrapper {
+    display: none;
   }
 }
 /* .Footer a {
